@@ -15,6 +15,7 @@ namespace ConsoleApp5
             q2.addChoice("26 december",false);
             q2.addChoice(" 5 december", false);
 
+
             presentQuestion(q1);
             presentQuestion(q2);
 
@@ -55,7 +56,7 @@ namespace ConsoleApp5
 
     public class ChoiceQuestion : Question
     {
-        public List<String> choices = new List<string>;
+        public List<String> choices = new List<string>();
 
         public void addChoice(string possibleAnswer, Boolean measure)
         {
@@ -69,8 +70,9 @@ namespace ConsoleApp5
         public new void display()
         {
             Console.WriteLine(Vraag);
+            choices.ForEach(el => Console.WriteLine(el));
 
-           
+
         }
     }
 }
